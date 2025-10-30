@@ -14,7 +14,7 @@ public class verification {
        }*/
         while(true){
             String input = sc.nextLine();
-            if(input.equals(m)) {
+            if(input.equalsIgnoreCase(m)) {
                 System.out.println("验证成功");
                 break;
             }else{

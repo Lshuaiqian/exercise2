@@ -2,15 +2,25 @@ import java.util.Random;
 import java.util.Scanner;
 public class verification {
     public static void main(String[] args) {
-       System.out.println(v());
+        String m=v();//用一个变量接收,防止下面的比较语句与输出的验证码不同
+       System.out.println(m);
        System.out.println("请输入验证码");
        Scanner sc = new Scanner(System.in);
-       String input = sc.nextLine();
-       if(input.equals(v())) {
+       /*String input = sc.nextLine();
+       if(input.equals(m)) {
            System.out.println("验证成功");
        }else{
            System.out.println("验证失败");
-       }
+       }*/
+        while(true){
+            String input = sc.nextLine();
+            if(input.equals(m)) {
+                System.out.println("验证成功");
+                break;
+            }else{
+                System.out.println("验证失败,请再次输入");
+            }
+        }
     }
     //一个生成验证码的方法
     public static String  v(){

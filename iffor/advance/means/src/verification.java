@@ -42,6 +42,26 @@ public class verification {
         int number=r2.nextInt(10);
         //如何把这个随机数字与字母拼接
         result=result+(char)('0'+number);
-        return result;
+        //打乱数字和字母(让数字不是一直在最后一位)
+        char[] v1=result.toCharArray();
+        Random r3=new Random();
+        /*for (int i = 0; i < v1.length; i++) {
+            int random=r3.nextInt(v1.length);
+            String temp=v1[i];  不是string类型,是char
+            v1[i]=v1[random];
+            v1[random]=temp;
+
+        }
+        for (int i = 0; i < v1.length; i++) {
+            return v1[i];  应该返回一个字符串
+
+        }*/
+        for (int i = 0; i < v1.length; i++) {
+            int random = r3.nextInt(v1.length);
+            char temp = v1[i];
+            v1[i] = v1[random];
+            v1[random] = temp;
+        }
+        return new String(v1);
     }
 }

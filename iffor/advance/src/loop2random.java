@@ -17,7 +17,7 @@ public class loop2random {
             count++;
             if(count==3){
                 System.out.println("你猜对了");
-                break;
+                break;//保底机制
 
             }
 

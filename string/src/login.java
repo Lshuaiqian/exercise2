@@ -1,11 +1,14 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-public class load {
+public class login {
     public static void main(String[] args) {
-        String rightUsername="zhangsan";
-        String rightPassword="a123456";
+        ArrayList<Student> student =new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-
+        System.out.println("请注册用户名:");
+        String rightUsername = sc.nextLine();
+        System.out.println("请设置密码:");
+        String rightPassword = sc.nextLine();
         for(int i=0;i<=2;i++) {
             System.out.println("请输入用户名");
             String username = sc.nextLine();

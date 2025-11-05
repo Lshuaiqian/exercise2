@@ -25,6 +25,8 @@ class Student {
     public void setPassword(String password) {
         this.password = password;
     }
-
+    public boolean matches(String username, String password) {
+        return this.username.equals(username) && this.password.equals(password);
+    }
 
 }
